@@ -1,0 +1,24 @@
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar {
+  background-color: rgba(34, 129, 201, 0.098);
+}
+
+#loginheader{
+  color:  white;
+  font-family: 'Source Sans Pro', serif;
+}
+
+#signinbutton {
+  background-color: rgba(19, 136, 208, 0.523);
+}
+
+
+

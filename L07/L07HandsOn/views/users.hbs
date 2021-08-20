@@ -1,0 +1,11 @@
+<h1>Hello, {{FirstName}} {{LastName}}</h1>
+<h2>Email: {{Email}}</h2>
+<h3>Username: {{UserName}}</h3>
+
+{{#if accessUser}}
+<p>
+    <form method="POST" action="/users/{{UserId}}">
+    <button type="submit">Delete</button>
+    </form>
+</p>
+{{#if}}

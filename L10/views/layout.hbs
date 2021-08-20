@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bg-image" style="
+        background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg');
+        height: 100vh;
+      ">
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <!-- Container wrapper -->
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand me-2" href="https://mdbgo.com/">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/60/60736.svg?token=exp=1620803981~hmac=a85def13f0c87282e485eecaf028a361"
+              height="40" alt="" loading="lazy" style="margin-top: -1px;" />
+          </a>
+
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <!-- Left links -->
+            {{#if LoggedIn}}
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/users/admin">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/profile">Profile</a>
+              </li>
+              <!-- Dropdown Posts -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  Posts
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="/posts">My Posts</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/newPost">Create New Post</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/logout">Logout</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        {{else}}
+        <div class="offset-lg-9">
+
+          <a class="btn btn-light px-6" href="/users/login" role="button">Login</a>
+          <a class="btn btn-primary px-3" href="/users/signup" role="button">Signup For
+            Free</a>
+        </div>
+        {{/if}}
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <br>
+    <br>
+    <!-- Background image -->
+    {{{body}}}
+  </div>
+  <!-- Background image -->
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+</body>
+
+</html>

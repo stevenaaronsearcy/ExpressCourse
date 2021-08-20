@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+        <div class="col-4">
+                <div class="card text-center">
+                        <div class="card-body">
+                                <h3 class="card-title">Hello, {{user.FirstName}} {{user.LastName}}!</h3>
+                                <hr>
+                                <p class="card-text">
+                                <h5>Email: {{user.Email}}</h5>
+                                <h5>UserId: {{user.UserId}}</h5>
+                                <h5>Username: {{user.UserName}}</h5>
+                                </p>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<hr />
+<h2>Posts</h2>
+
+{{#each user.posts}}
+
+<h3>{{PostTitle}} : {{PostBody}}</h3>
+
+{{/each}}

@@ -1,0 +1,27 @@
+<h1 style="text-align: center">Users in the database</h1>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>View User</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Admin</th>
+            <th>Deleted</th>
+            <th>Delete User</th>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td> <a href='/users/admin/editUser/{{UserId}}'>View</a></td>
+            <td>{{FirstName}}</td>
+            <td>{{LastName}}</td>
+            <td>{{UserName}}</td>
+            <td>{{Email}}</td>
+            <td>{{Admin}}</td>
+            <td>{{Deleted}}</td>
+            <td><button onClick="deleteUser({{user.UserId}})" class="btn btn-primary">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

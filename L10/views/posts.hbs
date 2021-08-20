@@ -1,0 +1,16 @@
+<script type="application/javascript">
+    var deletePost = function (id) {
+        console.log(id);
+        fetch("posts/" + id, {method: "delete"}).then(result => window.location = window.location);
+    }
+</script>
+
+<h1>Here are a list of your posts!</h1>
+
+
+{{#each posts}}
+<h3>
+    {{ PostTitle }} : {{ PostBody }} <button onClick="deletePost({{PostId}})">delete</button> <a
+        href="posts/{{PostId}}">Edit</a>
+</h3>
+{{/ each}}
